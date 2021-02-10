@@ -1,5 +1,8 @@
 // Script.js
 
 window.addEventListener('DOMContentLoaded', () => {
-  // TODO
+  myStorage = window.localStorage;
+  const cat = localStorage.getItem(fetch('https://fakestoreapi.com/products'));
+  
+  
 });
