@@ -1,8 +1,11 @@
 // Script.js
 
 window.addEventListener('DOMContentLoaded', () => {
+  let url = 'https://fakestoreapi.com/products';
+  let response = await fetch(url);
+  
   myStorage = window.localStorage;
-  const cat = localStorage.getItem(fetch('https://fakestoreapi.com/products'));
+  let array = localStorage.getItem(response);
   
   
 });
