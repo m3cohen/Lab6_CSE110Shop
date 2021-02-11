@@ -13,9 +13,47 @@ class ProductItem extends HTMLElement {
         const button = document.createElement('button');
         
         product.setAttribute('class', 'product');
+        
         image.setAttribute('src', this.getAttribute('image'));
+        image.setAttribute('src', this.getAttribute('image'));
+        image.setAttribute('alt', this.getAttribute('title'));
+        image.setAttribute('width', 200);
+        image.setAttribute('class', 'pix');
+      
+        name.textContent = this.getAttribute('title');
         name.setAttribute('class', 'title');
+        
+        price.textContent = '$' + this.getAttribute('price');
         price.setAttribute('class', 'price');
+      
+          let id = this.getAttribute('id');
+          let count = document.getElementById('cart-count');
+          if(localStorage.getItem(id)) {
+            button.textContent = 'Remove from Cart';
+            count.setAttribute('textContent', parseInt(++count.textContent));
+          } else {
+            button.textContent = 'Add to Cart';
+          }
+
+          button.onclick = function() {
+            alert('Added to cart!'); 
+            if(button.textContent == 'Add to Cart') {     
+              count.setAttribute('textContent', parseInt(++count.textContent));
+              button.textContent = 'Remove from Cart';
+              localStorage.setItem(id, id);
+            } else {
+              count.setAttribute('textContent', parseInt(--count.textContent));
+              button.textContent = 'Add to Cart';
+              localStorage.removeItem(id);
+            }
+
+          };
+        
+      
+      
+      
+      
+      
 
         let style = document.createElement('style');
           style.textContent = `
