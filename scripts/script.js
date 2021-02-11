@@ -1,5 +1,5 @@
 // Script.js
-/*
+
  window.addEventListener('DOMContentLoaded', () => {
     fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
@@ -19,8 +19,9 @@
       productList.appendChild(product);
   }
 });
-*/
 
+
+/*
 if (localStorage.getItem('items') === null) {
   window.addEventListener('DOMContentLoaded', () => {
     fetch('https://fakestoreapi.com/products')
