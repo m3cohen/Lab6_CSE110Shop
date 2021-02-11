@@ -20,7 +20,7 @@
   }
 });
 
-
+*/
 /*
 if (localStorage.getItem('items') === null) {
   window.addEventListener('DOMContentLoaded', () => {
@@ -42,3 +42,4 @@ for (let i = 0; i < parsed.length; i++) {
   product.setAttribute('id', item.id);
   list.appendChild(product);
 }
+*/
