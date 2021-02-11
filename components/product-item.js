@@ -1,5 +1,5 @@
 // product-item.js
-/*
+
 class ProductItem extends HTMLElement {
   constructor() {
     super();
@@ -131,7 +131,7 @@ class ProductItem extends HTMLElement {
 }
 
 customElements.define('product-item', ProductItem);
-*/
+/*
 
 class ProductItem extends HTMLElement {
   constructor() {
