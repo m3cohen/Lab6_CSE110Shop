@@ -1,15 +1,25 @@
 // product-item.js
 
 class ProductItem extends HTMLElement {
-  constructor(){
+  constructor() {
     super();
-   
-    let shadow = this.attachShadow({mode: 'open'});
+    this.attachShadow({mode: 'open'});
+  }
+    connectedCallBack(){
+        const product = document.createElement('li');
+        const image = document.createElement('img');
+        const title = document.createElement('p');
+        const price = document.createElement('p');
+        const button = document.createElement('button');
+        
+        product.setAttribute('class', 'product');
+        image.setAttribute('src', this.getAttribute('image'));
+        name.setAttribute('class', 'title');
+        price.setAttribute('class', 'price');
+        
     
-    const image = document.createElement('img');
-    const title = document.createElement('p');
-    const price = document.createElement('p');
-    const button = document.createElement('button');
+    }
+    
     
     let style = document.createElement('style');
     
@@ -84,7 +94,7 @@ class ProductItem extends HTMLElement {
       shadow.appendChild(title);
       shadow.appendChild(button);
      
-  }            
+    
 }
 
 customElements.define('product-item', ProductItem);
